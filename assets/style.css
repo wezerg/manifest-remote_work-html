@@ -7,15 +7,37 @@ body, html{
 #app{
     display: flex;
     height: 100%;
+    background: radial-gradient(ellipse at 30.15% -16.5%, #7499ff, transparent 63%, transparent 100%),
+                radial-gradient(ellipse at -10% 90%, #8b66e2 25%, transparent 90%, transparent 100%),
+                radial-gradient(ellipse at 79.90% 110%, #6da7ff 2%, transparent 20%, transparent 100%),
+                radial-gradient(ellipse at 90% -5%, #1051c9 35%, transparent 90%, transparent 100%);
 }
 nav{
-    display: flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 main{
-    background-color: red;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
+}
+
+.bg-blur1{
+    background: radial-gradient(ellipse at 30.15% -16.5%, #EB72FF, transparent 63%, transparent 100%),
+                radial-gradient(ellipse at 20.81% 75%, #FF3162, transparent 85%, transparent 100%),
+                radial-gradient(ellipse at 79.90% 102%, #C36EAD, transparent 98%, transparent 100%),
+                radial-gradient(ellipse at 93.3% 0%, #FED7FF, transparent 85%, transparent 100%);
+}
+.bg-blur2{
+    background: radial-gradient(ellipse at 30.15% -16.5%, #FF73AE, transparent 63%, transparent 100%),
+                radial-gradient(ellipse at 20.81% 75%, #DE08A2, transparent 85%, transparent 100%),
+                radial-gradient(ellipse at 79.90% 102%, #FFEC41, transparent 98%, transparent 100%),
+                radial-gradient(ellipse at 93.3% 0%, #FFCEF1, transparent 85%, transparent 100%);
+}
+.bg-blur3{
+    background: radial-gradient(ellipse at 30.15% -16.5%, #54DEE7, transparent 63%, transparent 100%),
+                radial-gradient(ellipse at 20.81% 75%, #86FF7C, transparent 85%, transparent 100%),
+                radial-gradient(ellipse at 79.90% 102%, #34ECE1, transparent 98%, transparent 100%),
+                radial-gradient(ellipse at 93.3% 0%, #236AF2, transparent 85%, transparent 100%);
 }
