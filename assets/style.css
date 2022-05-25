@@ -1,3 +1,4 @@
+/* Main Architecture */
 body, html{
     margin: 0;
     height: 100%;
@@ -22,7 +23,52 @@ main{
     flex-grow: 1;
     overflow: auto;
 }
+/* Utils */
+.flGrow{
+    display: flex;
+    flex-grow: 1;
+}
+/* Texte */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Abril Fatface', cursive; */
+.title-big{
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 192px;
+}
+.title-large{
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 130px;
+}
+.title{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 81px;
+}
+.subtitle{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+}
+.text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.subtext{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+/* */
 
+
+
+
+
+
+/*
 .bg-blur1{
     background: radial-gradient(ellipse at 30.15% -16.5%, #EB72FF, transparent 63%, transparent 100%),
                 radial-gradient(ellipse at 20.81% 75%, #FF3162, transparent 85%, transparent 100%),
@@ -40,4 +86,4 @@ main{
                 radial-gradient(ellipse at 20.81% 75%, #86FF7C, transparent 85%, transparent 100%),
                 radial-gradient(ellipse at 79.90% 102%, #34ECE1, transparent 98%, transparent 100%),
                 radial-gradient(ellipse at 93.3% 0%, #236AF2, transparent 85%, transparent 100%);
-}
+}*/
