@@ -1,11 +1,46 @@
-<button style="position: absolute" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+<button style="position: absolute; left: 4px; top: 4px" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse align-items-start" id="navBar">
-    <div class="navbar-nav" style="flex-direction: column;margin-top: 40px; width: 252px;">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
+    <div class="navbar-nav">
+        <h3 class="subtitle text-center" style="font-size: 35px;">Télétravail</h3>
+        <button id="nav-acceuil" class="btn text-start subtext" onclick="window.location.href = './'">Acceuil</button>
+        <button id="nav-raisons" class="btn text-start subtext" onclick="navbarShowList(this)">10 bonnes raisons d'être en télétravail</button>
+        <ul class="px-0">
+            <li class="list-nav subtext" value="intro" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/introduction.svg" alt="emoji-introduction">Introduction</li>
+            <li class="list-nav subtext" value="temps" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/temps.svg" alt="emoji-temps">Temps</li>
+            <li class="list-nav subtext" value="argent" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/argent.svg" alt="emoji-argent">Argent</li>
+            <li class="list-nav subtext" value="bien-etre" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/bien-etre.svg" alt="emoji-bien-etre">Bien-être</li>
+            <li class="list-nav subtext" value="vie-privee" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/vie-privee.svg" alt="emoji-vie-privee">Vie privée</li>
+            <li class="list-nav subtext" value="productivite" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/productivite.svg" alt="emoji-productivite">Productivité</li>
+            <li class="list-nav subtext" value="confort" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/confort.svg" alt="emoji-confort">Confort</li>
+            <li class="list-nav subtext" value="autonomie" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/autonomie.svg" alt="emoji-autonomie">Autonomie</li>
+            <li class="list-nav subtext" value="nomade" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/nomade.svg" alt="emoji-nomade">Nomade</li>
+            <li class="list-nav subtext" value="sante" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/sante.svg" alt="emoji-sante">Santé</li>
+            <li class="list-nav subtext" value="ecologie" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/ecologie.svg" alt="emoji-ecologie">Ecologie</li>
+        </ul>
+        <button id="nav-techno" class="btn text-start subtext" onclick="navbarShowList(this)">Nouvelles technologies</button>
+        <ul class="px-0">
+            <li class="list-nav subtext" value="collaboration" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/travail-collaboration.svg" alt="emoji-travail-collaboration">Travail & collaboration</li>
+            <li class="list-nav subtext" value="outils" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/outils.svg" alt="emoji-outils">Les outils</li>
+            <li class="list-nav subtext" value="objet" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/objet-connecte.svg" alt="emoji-objet-connecte">Objets connectés</li>
+            <li class="list-nav subtext" value="sociologie" onclick="navbarListClick(this)">
+                <img class="me-2" src="./assets/emojis/sociologie.svg" alt="emoji-sociologie">Sociologie</li>
+        </ul>
+        <button id="nav-journee" class="btn text-start subtext" onclick="navbarShowList(this)">Journée de travail</button>
     </div>
 </div>
