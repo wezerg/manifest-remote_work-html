@@ -4,6 +4,7 @@ body, html{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    color: white;
 }
 #app{
     display: flex;
@@ -21,7 +22,8 @@ main{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 /* Utils */
 .flGrow{
@@ -32,37 +34,60 @@ main{
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Abril Fatface', cursive; */
 .title-big{
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 128px;
     line-height: 192px;
 }
 .title-large{
+    font-family: 'Abril Fatface', cursive;
     font-weight: 400;
     font-size: 96px;
     line-height: 130px;
 }
 .title{
+    font-family: 'Abril Fatface', cursive;
     font-weight: 400;
     font-size: 60px;
     line-height: 81px;
 }
 .subtitle{
+    font-family: 'Abril Fatface', cursive;
     font-weight: 400;
     font-size: 48px;
     line-height: 65px;
 }
+.text-large{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
 .text{
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
 }
 .subtext{
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
 }
-/* */
-
+/* --- Page --- */
+/* Acceuil */
+#btn-acceuil{
+    border: 2px solid white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    padding: 11px 37px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
 
 
 
