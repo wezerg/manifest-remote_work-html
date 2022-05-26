@@ -185,6 +185,15 @@ main{
     display: table-cell;
     vertical-align: middle;
 }
+.icon-plane{
+    display: table;
+}
+.icon-plane::before{
+    content: url('./emojis/plane.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
 .icon-quote{
     position: relative;
 }
@@ -255,6 +264,15 @@ main{
 }
 .raisons-level > div > p{
     font-weight: 700;
+}
+#card-nomade{
+    display: flex;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 32px 24px;
+}
+#card-nomade img{
+    width: 180px;
 }
 
 
