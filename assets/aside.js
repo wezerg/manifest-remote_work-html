@@ -35,7 +35,6 @@ function navbarShowList(elm){
 
 function navbarListClick(elm){
     const url = window.location;
-    console.log(url.pathname.split('/'));
     switch (elm.parentNode.previousElementSibling.id) {
         case "nav-raisons":
             if (url.pathname.split('/')[1] === "10-bonnes-raisons.html") {
