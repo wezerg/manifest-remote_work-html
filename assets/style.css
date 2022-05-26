@@ -144,7 +144,7 @@ main{
     display: block;
     color: rgba(255, 255, 255, 0.6);
 }
-.raison-title{
+.raisons-title{
     margin-top: -98px;
     margin-left: 105px;
 }
@@ -216,6 +216,20 @@ main{
     right: 80px;
     top: -20%;
 }
+.bar-stat{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+}
+.bar-stat > span{
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 52px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px 5px 0px 0px;
+}
+
 
 
 
