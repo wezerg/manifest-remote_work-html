@@ -61,7 +61,6 @@ main{
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 0px 80px!important;
 }
 /* Utils */
 .flGrow{
@@ -69,8 +68,6 @@ main{
     flex-grow: 1;
 }
 /* Texte */
-/* font-family: 'Poppins', sans-serif; */
-/* font-family: 'Abril Fatface', cursive; */
 .title-big{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -151,6 +148,75 @@ main{
     margin-top: -98px;
     margin-left: 105px;
 }
+.raison-list-puce{
+    list-style-image: url("./emojis/liste-puce-green.svg");
+    padding-right: 40px;
+}
+.raison-list-puce > li{
+    line-height: 40px!important;
+    padding-left: 16px;
+}
+.bg-white-fullr{
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    padding: 28px 32px;
+}
+.bg-white-leftr{
+    background: rgba(255, 255, 255, 0.25);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 28px 32px;
+}
+.icon-star{
+    display: table;
+}
+.icon-star::before{
+    content: url('./emojis/star.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-wand{
+    display: table;
+}
+.icon-wand::before{
+    content: url('./emojis/wand.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-quote{
+    position: relative;
+}
+.icon-quote::before{
+    content: ',,';
+    font-family: 'Abril Fatface', cursive;
+    font-size: 200px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.25);
+    transform: rotate(180deg);
+    position: absolute;
+    top: 50px;
+    left: -20px;
+}
+.icon-quote::after{
+    content: ',,';
+    font-family: 'Abril Fatface', cursive;
+    font-size: 200px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    bottom: 90px;
+    right: -20px;
+}
+#img-raisons-argent{
+    position: absolute;
+    height: 130%;
+    width: auto;
+    right: 80px;
+    top: -20%;
+}
+
 
 
 
