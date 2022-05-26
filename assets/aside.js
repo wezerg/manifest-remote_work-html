@@ -12,9 +12,6 @@ async function onLoadAside(){
         default:
             break;
     }
-    // TODO: Affichage de la page demandée ---------------
-    const slideToLoad = document.querySelector(`#${window.location.search.split('=')[1]}`);
-    slideToLoad.classList.replace('d-none', 'd-flex');
 }
 
 function navbarShowList(elm){
@@ -42,7 +39,7 @@ function navbarListClick(elm){
             break;
         case "nav-techno":
             if (url.pathname.split('/')[2] === "nouvelles-technologies.html") {
-                changeSlide(elm.getAttribute('value'));
+                scrollSlide(elm.getAttribute('value'));
             }
             else{
                 url.href = `./nouvelles-technologies.html?page=${elm.getAttribute('value')}`
@@ -58,12 +55,19 @@ function changeSlide(idPage){
     const listSlide = slideSelected.parentNode.querySelectorAll('article');
     listSlide.forEach((slide) => {
         if (slide === slideSelected) {
-            slide.classList.replace('d-none', 'd-flex');
+            slide.classList.replace('d-none', 'd-block');
         }
         else{
-            slide.classList.replace('d-flex', 'd-none');
+            slide.classList.replace('d-block', 'd-none');
         }
     })
+}
+
+function scrollSlide(idPage){
+    const slideSelected = document.querySelector(`#${idPage}`);
+    const listSlide = slideSelected.parentNode.querySelectorAll('article');
+    // TODO: Faire scroll sur le slide sélectionné
+    console.log(slideSelected);
 }
 
 onLoadAside();

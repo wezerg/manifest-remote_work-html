@@ -61,6 +61,7 @@ main{
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 0px 80px!important;
 }
 /* Utils */
 .flGrow{
@@ -75,6 +76,7 @@ main{
     font-weight: 700;
     font-size: 128px;
     line-height: 192px;
+    color: rgba(255, 255, 255, 0.25);
 }
 .title-large{
     font-family: 'Abril Fatface', cursive;
@@ -125,7 +127,30 @@ main{
     font-size: 24px;
     line-height: 36px;
 }
-
+/* 10 bonnes raisons */
+.lbl-stat{
+    font-family: 'Abril Fatface';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 81px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    padding: 42px 28px;
+    width: 165px;
+    height: 165px;
+}
+.lbl-stat > span{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 0px;
+    font-family: "Poppins";
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+}
+.raison-title{
+    margin-top: -98px;
+    margin-left: 105px;
+}
 
 
 
@@ -149,3 +174,8 @@ main{
                 radial-gradient(ellipse at 79.90% 102%, #34ECE1, transparent 98%, transparent 100%),
                 radial-gradient(ellipse at 93.3% 0%, #236AF2, transparent 85%, transparent 100%);
 }*/
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+
+}
