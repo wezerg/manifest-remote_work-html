@@ -7,6 +7,13 @@ async function onLoadAside(){
             document.querySelector('#nav-techno').classList.add('show');
             break;
         case "10-bonnes-raisons.html":
+            if (window.location.search) {
+                document.querySelector(`[value=${window.location.search.split('=')[1]}]`).classList.add('active');
+            }
+            else{
+                document.querySelector(`[value="intro"]`).classList.add('active');
+
+            }
             document.querySelector('#nav-raisons').classList.add('show');
             break;
         default:
@@ -60,7 +67,17 @@ function changeSlide(idPage){
         else{
             slide.classList.replace('d-block', 'd-none');
         }
-    })
+    });
+    const ancreSelected = document.querySelector(`[value="${idPage}"]`);
+    const listAncre = ancreSelected.parentNode.querySelectorAll('li');
+    listAncre.forEach((ancre) => {
+        if (ancre === ancreSelected) {
+            ancre.classList.add('active');
+        }
+        else{
+            ancre.classList.remove('active');
+        }
+    });
 }
 
 function scrollSlide(idPage){

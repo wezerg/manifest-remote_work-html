@@ -52,6 +52,9 @@ nav{
     background: #8798F7;
     cursor: pointer;
 }
+.list-nav.active{
+    background: #8798F7;
+}
 .navbar-nav li:not(:last-child){
     margin-bottom: 4px;
 }   
