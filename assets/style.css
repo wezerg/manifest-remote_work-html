@@ -243,6 +243,19 @@ main{
 .check-list-puce > li > span{
     font-weight: 500;
 }
+.raisons-level{
+    display: flex;
+    padding: 16px 24px;
+}
+.raisons-level h4{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px; 
+    white-space: nowrap; 
+    line-height: 42px;
+}
+.raisons-level > div > p{
+    font-weight: 700;
+}
 
 
 
