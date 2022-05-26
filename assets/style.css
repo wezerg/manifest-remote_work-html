@@ -229,6 +229,20 @@ main{
     background: rgba(255, 255, 255, 0.25);
     border-radius: 5px 5px 0px 0px;
 }
+.check-list-puce{
+    list-style-image: url("./emojis/liste-puce-check.svg");
+    padding-right: 40px;
+}
+.check-list-puce > li:not(:last-child){
+    margin-bottom: 32px;
+}
+.check-list-puce > li{
+    padding-left: 16px;
+    font-weight: 700;
+}
+.check-list-puce > li > span{
+    font-weight: 500;
+}
 
 
 
