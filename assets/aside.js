@@ -7,14 +7,18 @@ async function onLoadAside(){
             document.querySelector('#nav-techno').classList.add('show');
             break;
         case "10-bonnes-raisons.html":
+            if (window.location.search) {
+                document.querySelector(`[value=${window.location.search.split('=')[1]}]`).classList.add('active');
+            }
+            else{
+                document.querySelector(`[value="intro"]`).classList.add('active');
+
+            }
             document.querySelector('#nav-raisons').classList.add('show');
             break;
         default:
             break;
     }
-    // TODO: Affichage de la page demandée ---------------
-    const slideToLoad = document.querySelector(`#${window.location.search.split('=')[1]}`);
-    slideToLoad.classList.replace('d-none', 'd-flex');
 }
 
 function navbarShowList(elm){
@@ -42,7 +46,7 @@ function navbarListClick(elm){
             break;
         case "nav-techno":
             if (url.pathname.split('/')[2] === "nouvelles-technologies.html") {
-                changeSlide(elm.getAttribute('value'));
+                scrollSlide(elm.getAttribute('value'));
             }
             else{
                 url.href = `./nouvelles-technologies.html?page=${elm.getAttribute('value')}`
@@ -58,12 +62,29 @@ function changeSlide(idPage){
     const listSlide = slideSelected.parentNode.querySelectorAll('article');
     listSlide.forEach((slide) => {
         if (slide === slideSelected) {
-            slide.classList.replace('d-none', 'd-flex');
+            slide.classList.replace('d-none', 'd-block');
         }
         else{
-            slide.classList.replace('d-flex', 'd-none');
+            slide.classList.replace('d-block', 'd-none');
         }
-    })
+    });
+    const ancreSelected = document.querySelector(`[value="${idPage}"]`);
+    const listAncre = ancreSelected.parentNode.querySelectorAll('li');
+    listAncre.forEach((ancre) => {
+        if (ancre === ancreSelected) {
+            ancre.classList.add('active');
+        }
+        else{
+            ancre.classList.remove('active');
+        }
+    });
+}
+
+function scrollSlide(idPage){
+    const slideSelected = document.querySelector(`#${idPage}`);
+    const listSlide = slideSelected.parentNode.querySelectorAll('article');
+    // TODO: Faire scroll sur le slide sélectionné
+    console.log(slideSelected);
 }
 
 onLoadAside();
