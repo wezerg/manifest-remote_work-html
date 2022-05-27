@@ -140,7 +140,7 @@ main{
     font-size: 24px;
     line-height: 36px;
 }
-/* 10 bonnes raisons */
+/* 10 bonnes raisons + nouvelles technologies */
 .lbl-stat{
     font-family: 'Abril Fatface';
     font-weight: 400;
@@ -308,8 +308,6 @@ main{
 #card-nomade img{
     width: 180px;
 }
-
-
 
 
 
