@@ -168,7 +168,7 @@ main{
     padding-right: 40px;
 }
 .raison-list-puce > li{
-    line-height: 40px!important;
+    margin-bottom: 8px;
     padding-left: 16px;
 }
 .bg-white-fullr{
