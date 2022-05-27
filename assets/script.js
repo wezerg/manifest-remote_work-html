@@ -1,6 +1,6 @@
 function onLoadPage(){
     const slideToLoad = document.querySelector(`#${window.location.search.split('=')[1]}`);
-    switch (window.location.pathname.split('/')[1]) {
+    switch (window.location.pathname.split('/')[2]) {
         case "nouvelles-technologies.html":
             if (window.location.search) {
                 scrollSlide(window.location.search.split('=')[1]);

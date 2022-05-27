@@ -163,11 +163,19 @@ main{
     margin-top: -98px;
     margin-left: 105px;
 }
-.raison-list-puce{
+.green-list-puce{
     list-style-image: url("./emojis/liste-puce-green.svg");
     padding-right: 40px;
 }
-.raison-list-puce > li{
+.green-list-puce > li{
+    margin-bottom: 8px;
+    padding-left: 16px;
+}
+.red-list-puce{
+    list-style-image: url("./emojis/liste-puce-red.svg");
+    padding-right: 40px;
+}
+.red-list-puce > li{
     margin-bottom: 8px;
     padding-left: 16px;
 }
@@ -182,6 +190,7 @@ main{
     border-bottom-left-radius: 30px;
     padding: 28px 32px;
 }
+/* Icon on text */
 .icon-star{
     display: table;
 }
@@ -205,6 +214,15 @@ main{
 }
 .icon-plane::before{
     content: url('./emojis/plane.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-exclamation{
+    display: table;
+}
+.icon-exclamation::before{
+    content: url('./emojis/exclamation.svg');
     padding-right: 16px;
     display: table-cell;
     vertical-align: middle;
