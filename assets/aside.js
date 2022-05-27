@@ -69,7 +69,7 @@ function changeSlide(idPage){
     const listSlide = slideSelected.parentNode.querySelectorAll('article');
     listSlide.forEach((slide) => {
         if (slide === slideSelected) {
-            slide.classList.replace('d-none', 'd-block');
+            animateSlide(slideSelected);
         }
         else{
             slide.classList.replace('d-block', 'd-none');
