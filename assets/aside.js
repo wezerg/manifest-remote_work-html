@@ -4,6 +4,13 @@ async function onLoadAside(){
     // Affichage de la liste en fonction de l'url
     switch (window.location.pathname.split('/')[2]) {
         case "nouvelles-technologies.html":
+            if (window.location.search) {
+                document.querySelector(`[value=${window.location.search.split('=')[1]}]`).classList.add('active');
+            }
+            else{
+                document.querySelector(`[value="intro"]`).classList.add('active');
+
+            }
             document.querySelector('#nav-techno').classList.add('show');
             break;
         case "10-bonnes-raisons.html":
@@ -37,7 +44,7 @@ function navbarListClick(elm){
     const url = window.location;
     switch (elm.parentNode.previousElementSibling.id) {
         case "nav-raisons":
-            if (url.pathname.split('/')[1] === "10-bonnes-raisons.html") {
+            if (url.pathname.split('/')[2] === "10-bonnes-raisons.html") {
                 changeSlide(elm.getAttribute('value'));
             }
             else{
@@ -45,7 +52,7 @@ function navbarListClick(elm){
             }
             break;
         case "nav-techno":
-            if (url.pathname.split('/')[1] === "nouvelles-technologies.html") {
+            if (url.pathname.split('/')[2] === "nouvelles-technologies.html") {
                 scrollSlide(elm.getAttribute('value'));
             }
             else{
@@ -68,23 +75,28 @@ function changeSlide(idPage){
             slide.classList.replace('d-block', 'd-none');
         }
     });
-    const ancreSelected = document.querySelector(`[value="${idPage}"]`);
-    const listAncre = ancreSelected.parentNode.querySelectorAll('li');
-    listAncre.forEach((ancre) => {
-        if (ancre === ancreSelected) {
-            ancre.classList.add('active');
-        }
-        else{
-            ancre.classList.remove('active');
-        }
-    });
+    activeLinkNav(idPage);
 }
 
 function scrollSlide(idPage){
     const slideSelected = document.querySelector(`#${idPage}`);
-    const listSlide = slideSelected.parentNode.querySelectorAll('article');
-    // TODO: Faire scroll sur le slide sélectionné
-    console.log(slideSelected);
+    slideSelected.scrollIntoView();
+    activeLinkNav(idPage);
+}
+
+function activeLinkNav(idPage){
+    const ancreSelected = document.querySelector(`[value="${idPage}"]`);
+    if (ancreSelected) {
+        const listAncre = ancreSelected.parentNode.querySelectorAll('li');
+        listAncre.forEach((ancre) => {
+            if (ancre === ancreSelected) {
+                ancre.classList.add('active');
+            }
+            else{
+                ancre.classList.remove('active');
+            }
+        });
+    }
 }
 
 onLoadAside();
