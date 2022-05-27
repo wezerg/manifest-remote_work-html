@@ -44,7 +44,7 @@ function navbarListClick(elm){
     const url = window.location;
     switch (elm.parentNode.previousElementSibling.id) {
         case "nav-raisons":
-            if (url.pathname.split('/')[2] === "10-bonnes-raisons.html") {
+            if (url.pathname.split('/')[1] === "10-bonnes-raisons.html") {
                 changeSlide(elm.getAttribute('value'));
             }
             else{
@@ -52,7 +52,7 @@ function navbarListClick(elm){
             }
             break;
         case "nav-techno":
-            if (url.pathname.split('/')[2] === "nouvelles-technologies.html") {
+            if (url.pathname.split('/')[1] === "nouvelles-technologies.html") {
                 scrollSlide(elm.getAttribute('value'));
             }
             else{
