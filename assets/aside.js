@@ -2,7 +2,7 @@ async function onLoadAside(){
     // Téléchargement de l'aside
     await fetch('./includes/aside.html').then((response) => response.text()).then((data) => document.querySelector('nav').innerHTML = data);
     // Affichage de la liste en fonction de l'url
-    switch (window.location.pathname.split('/')[2]) {
+    switch (window.location.pathname.split('/')[1]) {
         case "nouvelles-technologies.html":
             if (window.location.search) {
                 document.querySelector(`[value=${window.location.search.split('=')[1]}]`).classList.add('active');
