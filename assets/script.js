@@ -4,10 +4,12 @@ function onLoadPage(){
     switch (filename) {
         case "nouvelles-technologies.html":
             if (window.location.search) {
-                const slideSelected = document.querySelector(`#${window.location.search.split('=')[1]}`);
-                setTimeout(() => {
-                    slideSelected.scrollIntoView();
-                }, 750);
+                document.querySelector('main').addEventListener('scroll', (ev) => eventScrollSlide(ev));
+                if (slideToLoad) {
+                    setTimeout(() => {
+                        slideToLoad.scrollIntoView();
+                    }, 750);
+                }
             }
             break;
         case "10-bonnes-raisons.html":
@@ -46,6 +48,26 @@ function animateSlide(slide){
         i++;
     }, 350);
     slide.classList.replace('d-none', 'd-block');
+}
+
+function eventScrollSlide(ev){
+    const main = ev.srcElement;
+    const listArticle = main.querySelectorAll('article');
+    listArticle.forEach((art) => {
+        if (main.scrollTop >= (art.offsetTop - 1) && main.scrollTop < art.offsetTop + art.offsetHeight) {
+            if (document.querySelector('.navbar-nav')) {
+                const listBtn = document.querySelector(`[value="${art.id}"]`).parentNode.children;
+                for (const btn of listBtn) {
+                    if (btn === document.querySelector(`[value="${art.id}"]`)) {
+                        btn.classList.add('active');
+                    }
+                    else{
+                        btn.classList.remove('active');
+                    }
+                }
+            }
+        }        
+    });
 }
 
 onLoadPage();

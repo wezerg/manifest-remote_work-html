@@ -4,13 +4,6 @@ async function onLoadAside(){
     await fetch('./includes/aside.html').then((response) => response.text()).then((data) => document.querySelector('nav').innerHTML = data);
     switch (filename) {
         case "nouvelles-technologies.html":
-            if (window.location.search) {
-                document.querySelector(`[value=${window.location.search.split('=')[1]}]`).classList.add('active');
-            }
-            else{
-                document.querySelector(`[value="intro"]`).classList.add('active');
-
-            }
             document.querySelector('#nav-techno').classList.add('show');
             break;
         case "10-bonnes-raisons.html":
@@ -81,7 +74,6 @@ function changeSlide(idPage){
 function scrollSlide(idPage){
     const slideSelected = document.querySelector(`#${idPage}`);
     slideSelected.scrollIntoView();
-    activeLinkNav(idPage);
 }
 
 function activeLinkNav(idPage){
