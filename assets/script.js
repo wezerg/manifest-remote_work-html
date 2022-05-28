@@ -1,6 +1,7 @@
 function onLoadPage(){
     const slideToLoad = document.querySelector(`#${window.location.search.split('=')[1]}`);
-    switch (window.location.pathname.split('/')[1]) {
+    const filename = document.location.pathname.substring(document.location.pathname.lastIndexOf('/')+1);
+    switch (filename) {
         case "nouvelles-technologies.html":
             if (window.location.search) {
                 const slideSelected = document.querySelector(`#${window.location.search.split('=')[1]}`);
