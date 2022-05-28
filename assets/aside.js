@@ -1,16 +1,9 @@
+const filename = document.location.pathname.substring(document.location.pathname.lastIndexOf('/')+1);
 async function onLoadAside(){
     // Téléchargement de l'aside
     await fetch('./includes/aside.html').then((response) => response.text()).then((data) => document.querySelector('nav').innerHTML = data);
-    // Affichage de la liste en fonction de l'url
-    switch (window.location.pathname.split('/')[1]) {
+    switch (filename) {
         case "nouvelles-technologies.html":
-            if (window.location.search) {
-                document.querySelector(`[value=${window.location.search.split('=')[1]}]`).classList.add('active');
-            }
-            else{
-                document.querySelector(`[value="intro"]`).classList.add('active');
-
-            }
             document.querySelector('#nav-techno').classList.add('show');
             break;
         case "10-bonnes-raisons.html":
@@ -44,7 +37,7 @@ function navbarListClick(elm){
     const url = window.location;
     switch (elm.parentNode.previousElementSibling.id) {
         case "nav-raisons":
-            if (url.pathname.split('/')[1] === "10-bonnes-raisons.html") {
+            if (filename === "10-bonnes-raisons.html") {
                 changeSlide(elm.getAttribute('value'));
             }
             else{
@@ -52,7 +45,7 @@ function navbarListClick(elm){
             }
             break;
         case "nav-techno":
-            if (url.pathname.split('/')[1] === "nouvelles-technologies.html") {
+            if (filename === "nouvelles-technologies.html") {
                 scrollSlide(elm.getAttribute('value'));
             }
             else{
@@ -81,7 +74,6 @@ function changeSlide(idPage){
 function scrollSlide(idPage){
     const slideSelected = document.querySelector(`#${idPage}`);
     slideSelected.scrollIntoView();
-    activeLinkNav(idPage);
 }
 
 function activeLinkNav(idPage){
