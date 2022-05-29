@@ -22,6 +22,10 @@ nav{
     flex-direction: column!important;
     width: 252px;
 }
+#navBar{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .navbar-nav > button{
     text-transform: uppercase;
     color: white;
@@ -65,6 +69,9 @@ main{
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+section{
+    padding: 20px 80px;
 }
 /* Utils */
 .flGrow{
@@ -128,7 +135,7 @@ main{
     line-height: 24px;
 }
 /* --- Page --- */
-/* Acceuil */
+/* - Acceuil - */
 #btn-accueil{
     border: 2px solid white;
     border-radius: 15px;
@@ -140,7 +147,7 @@ main{
     font-size: 24px;
     line-height: 36px;
 }
-/* 10 bonnes raisons + nouvelles technologies */
+/* Statistic bubble */
 .lbl-stat{
     font-family: 'Abril Fatface';
     font-weight: 400;
@@ -160,10 +167,30 @@ main{
     display: block;
     color: rgba(255, 255, 255, 0.6);
 }
+/* Statistic bar */
+.bar-stat{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+}
+.bar-stat > span{
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 52px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px 5px 0px 0px;
+}
+/* Titles */
 .raisons-title{
     margin-top: -98px;
     margin-left: 105px;
 }
+.journee-title{
+    padding: 8px 28px!important; 
+    text-transform: uppercase;
+}
+/* List puce */
 .green-list-puce{
     list-style-image: url("./emojis/liste-puce-green.svg");
     padding-right: 40px;
@@ -180,6 +207,21 @@ main{
     margin-bottom: 8px;
     padding-left: 16px;
 }
+.check-list-puce{
+    list-style-image: url("./emojis/liste-puce-check.svg");
+    padding-right: 40px;
+}
+.check-list-puce > li:not(:last-child){
+    margin-bottom: 16px;
+}
+.check-list-puce > li{
+    padding-left: 16px;
+    font-weight: 700;
+}
+.check-list-puce > li > span{
+    font-weight: 500;
+}
+/* Background */
 .bg-white-fullr{
     background: rgba(255, 255, 255, 0.25);
     border-radius: 30px;
@@ -191,12 +233,53 @@ main{
     border-bottom-left-radius: 30px;
     padding: 28px 32px;
 }
+/* Custome border */
+.border-dashed-comparatif{
+    border-right: 3px dashed #FFFFFF;
+    border-bottom: none;
+}
 /* Icon on text */
 .icon-star{
     display: table;
 }
 .icon-star::before{
     content: url('./emojis/star.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-sun{
+    display: table;
+}
+.icon-sun::before{
+    content: url('./emojis/sun.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-confetti{
+    display: table;
+}
+.icon-confetti::before{
+    content: url('./emojis/confetti.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-moon{
+    display: table;
+}
+.icon-moon::before{
+    content: url('./emojis/moon.svg');
+    padding-right: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-sandwich{
+    display: table;
+}
+.icon-sandwich::before{
+    content: url('./emojis/sandwich.svg');
     padding-right: 16px;
     display: table-cell;
     vertical-align: middle;
@@ -252,6 +335,7 @@ main{
     bottom: 90px;
     right: -20px;
 }
+/* Custom style img */
 #img-raisons-argent{
     position: absolute;
     height: 130%;
@@ -259,33 +343,7 @@ main{
     right: 80px;
     top: -20%;
 }
-.bar-stat{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 100%;
-}
-.bar-stat > span{
-    margin-left: 8px;
-    margin-right: 8px;
-    width: 52px;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 5px 5px 0px 0px;
-}
-.check-list-puce{
-    list-style-image: url("./emojis/liste-puce-check.svg");
-    padding-right: 40px;
-}
-.check-list-puce > li:not(:last-child){
-    margin-bottom: 16px;
-}
-.check-list-puce > li{
-    padding-left: 16px;
-    font-weight: 700;
-}
-.check-list-puce > li > span{
-    font-weight: 500;
-}
+/* Cards */
 .raisons-level{
     display: flex;
     padding: 16px 24px;
@@ -309,30 +367,13 @@ main{
     width: 180px;
 }
 
-
-
-
-/*
-.bg-blur1{
-    background: radial-gradient(ellipse at 30.15% -16.5%, #EB72FF, transparent 63%, transparent 100%),
-                radial-gradient(ellipse at 20.81% 75%, #FF3162, transparent 85%, transparent 100%),
-                radial-gradient(ellipse at 79.90% 102%, #C36EAD, transparent 98%, transparent 100%),
-                radial-gradient(ellipse at 93.3% 0%, #FED7FF, transparent 85%, transparent 100%);
-}
-.bg-blur2{
-    background: radial-gradient(ellipse at 30.15% -16.5%, #FF73AE, transparent 63%, transparent 100%),
-                radial-gradient(ellipse at 20.81% 75%, #DE08A2, transparent 85%, transparent 100%),
-                radial-gradient(ellipse at 79.90% 102%, #FFEC41, transparent 98%, transparent 100%),
-                radial-gradient(ellipse at 93.3% 0%, #FFCEF1, transparent 85%, transparent 100%);
-}
-.bg-blur3{
-    background: radial-gradient(ellipse at 30.15% -16.5%, #54DEE7, transparent 63%, transparent 100%),
-                radial-gradient(ellipse at 20.81% 75%, #86FF7C, transparent 85%, transparent 100%),
-                radial-gradient(ellipse at 79.90% 102%, #34ECE1, transparent 98%, transparent 100%),
-                radial-gradient(ellipse at 93.3% 0%, #236AF2, transparent 85%, transparent 100%);
-}*/
-
 /* --- Responsive --- */
-@media (max-width: 1200px) {
-
+@media (max-width: 992px) {
+    section{
+        padding: 16px 40px;
+    }
+    .border-dashed-comparatif{
+        border-bottom: 3px dashed #FFFFFF;
+        border-right: none;
+    }
 }

@@ -3,13 +3,16 @@ function onLoadPage(){
     const filename = document.location.pathname.substring(document.location.pathname.lastIndexOf('/')+1);
     switch (filename) {
         case "nouvelles-technologies.html":
+            document.querySelector('main').addEventListener('scroll', (ev) => eventScrollSlide(ev));
             if (window.location.search) {
-                document.querySelector('main').addEventListener('scroll', (ev) => eventScrollSlide(ev));
                 if (slideToLoad) {
                     setTimeout(() => {
                         slideToLoad.scrollIntoView();
                     }, 750);
                 }
+            }
+            else{
+                document.querySelector('#collaboration').scrollIntoView();
             }
             break;
         case "10-bonnes-raisons.html":
@@ -18,6 +21,19 @@ function onLoadPage(){
             }
             else{
                 document.querySelector('#intro').classList.replace('d-none', 'd-block');
+            }
+            break;
+        case "journee.html":
+            document.querySelector('main').addEventListener('scroll', (ev) => eventScrollSlide(ev));
+            if (window.location.search) {
+                if (slideToLoad) {
+                    setTimeout(() => {
+                        slideToLoad.scrollIntoView();
+                    }, 750);
+                }
+            }
+            else{
+                document.querySelector('#lever').scrollIntoView();
             }
             break;
         default:
