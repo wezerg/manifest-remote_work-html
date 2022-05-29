@@ -62,7 +62,6 @@ function navbarListClick(elm){
             else{
                 url.href = `./journee.html?page=${elm.getAttribute('value')}`
             }
-
             break;
         default:
             break;
