@@ -22,6 +22,10 @@ nav{
     flex-direction: column!important;
     width: 252px;
 }
+#navBar{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .navbar-nav > button{
     text-transform: uppercase;
     color: white;
