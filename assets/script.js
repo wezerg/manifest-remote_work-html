@@ -43,10 +43,13 @@ function onLoadPage(){
 
 function animateSlide(slide){
     let i = 1;
-    const listCol = slide.querySelectorAll('[class*="col-"]');
+    let listCol = slide.querySelectorAll('[class*="col-"]');
     for (const col of listCol) {
         col.style.opacity = "0";
     }
+    // Shuffle Array
+    listCol = [...listCol].sort((a, b) => 0.5 - Math.random());
+    // Apply animation on elements of slide
     listCol[0].classList.add('animate__fadeIn');
     listCol[0].classList.add('animate__animated');
     const timer = setInterval(() => {
@@ -84,6 +87,32 @@ function eventScrollSlide(ev){
             }
         }        
     });
+}
+
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    /*while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      console.log(randomIndex);
+      currentIndex--;
+        
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+        console.log(array);
+    }*/
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    
+    return array;
 }
 
 onLoadPage();
