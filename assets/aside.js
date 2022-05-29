@@ -16,6 +16,9 @@ async function onLoadAside(){
             }
             document.querySelector('#nav-raisons').classList.add('show');
             break;
+        case "journee.html":
+            document.querySelector('#nav-journee').classList.add('show');
+            break;
         default:
             break;
     }
@@ -51,6 +54,15 @@ function navbarListClick(elm){
             else{
                 url.href = `./nouvelles-technologies.html?page=${elm.getAttribute('value')}`
             }
+            break;
+        case "nav-journee":
+            if (filename === "journee.html") {
+                scrollSlide(elm.getAttribute('value'));
+            }
+            else{
+                url.href = `./journee.html?page=${elm.getAttribute('value')}`
+            }
+
             break;
         default:
             break;

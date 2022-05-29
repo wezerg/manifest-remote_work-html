@@ -70,6 +70,9 @@ main{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+section{
+    padding: 20px 80px;
+}
 /* Utils */
 .flGrow{
     display: flex;
@@ -338,5 +341,7 @@ main{
 
 /* --- Responsive --- */
 @media (max-width: 1200px) {
-
+    section{
+        padding: 16px 40px;
+    }
 }
