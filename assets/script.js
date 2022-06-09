@@ -48,7 +48,7 @@ function animateSlide(slide){
         col.style.opacity = "0";
     }
     // Shuffle Array
-    listCol = [...listCol].sort((a, b) => 0.5 - Math.random());
+    // listCol = [...listCol].sort((a, b) => 0.5 - Math.random());
     // Apply animation on elements of slide
     listCol[0].classList.add('animate__fadeIn');
     listCol[0].classList.add('animate__animated');

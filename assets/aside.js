@@ -24,15 +24,17 @@ async function onLoadAside(){
     }
 }
 
-function navbarShowList(elm){
+function navigatePage(elm){
     const list = elm.parentNode.querySelectorAll('button');
     list.forEach((btn) => {
         if (btn === elm) {
-            btn.classList.add('show');
+            //btn.classList.add('show');
+            console.log()
+            window.location.href = `./${elm.value}.html?page=${elm.nextElementSibling.children[0].getAttribute('value')}`;
         }
-        else{
+        /*else{
             btn.classList.remove('show');
-        }
+        }*/
     });
 }
 
