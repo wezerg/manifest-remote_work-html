@@ -5,7 +5,7 @@
     <div class="navbar-nav">
         <h3 class="subtitle text-center" style="font-size: 35px;">Télétravail</h3>
         <button id="nav-accueil" class="btn text-start subtext" onclick="window.location.href = './'">Accueil</button>
-        <button id="nav-raisons" class="btn text-start subtext" onclick="navbarShowList(this)">10 bonnes raisons d'être en télétravail</button>
+        <button id="nav-raisons" value="10-bonnes-raisons" class="btn text-start subtext" onclick="navigatePage(this)">10 bonnes raisons d'être en télétravail</button>
         <ul class="px-0">
             <li class="list-nav subtext" value="intro" onclick="navbarListClick(this)">
                 <img class="me-2" src="./assets/emojis/introduction.svg" alt="emoji-introduction">Introduction</li>
@@ -30,7 +30,7 @@
             <li class="list-nav subtext" value="ecologie" onclick="navbarListClick(this)">
                 <img class="me-2" src="./assets/emojis/ecologie.svg" alt="emoji-ecologie">Ecologie</li>
         </ul>
-        <button id="nav-techno" class="btn text-start subtext" onclick="navbarShowList(this)">Nouvelles technologies</button>
+        <button id="nav-techno" value="nouvelles-technologies" class="btn text-start subtext" onclick="navigatePage(this)">Nouvelles technologies</button>
         <ul class="px-0">
             <li class="list-nav subtext" value="collaboration" onclick="navbarListClick(this)">
                 <img class="me-2" src="./assets/emojis/travail-collaboration.svg" alt="emoji-travail-collaboration">Travail & collaboration</li>
@@ -41,7 +41,7 @@
             <li class="list-nav subtext" value="sociologie" onclick="navbarListClick(this)">
                 <img class="me-2" src="./assets/emojis/sociologie.svg" alt="emoji-sociologie">Sociologie</li>
         </ul>
-        <button id="nav-journee" class="btn text-start subtext" onclick="navbarShowList(this)">Journée de travail</button>
+        <button id="nav-journee" value="journee" class="btn text-start subtext" onclick="navigatePage(this)">Journée de travail</button>
         <ul class="px-0">
             <li class="list-nav subtext" value="lever" onclick="navbarListClick(this)">
                 <img class="me-2" src="./assets/emojis/sun.svg" alt="emoji-lever">Lever</li>
